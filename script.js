@@ -63,7 +63,7 @@ function generatePassword() {
     }
 
     if (uppercaseLetters) {
-      passwordCharacters = passwordCharacter.concat(uppercase);
+      passwordCharacters = passwordCharacters.concat(uppercase);
     }
 
     if (numericCharacters) {
