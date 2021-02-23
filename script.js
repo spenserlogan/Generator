@@ -6,17 +6,17 @@ function generatePassword() {
   //var number=
   var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   //var lowercase=
-  var lowercase = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"];
+  var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   //var uppercase=
-  var uppercase = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
+  var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   //var specail=
-  var special = ["!, @, #, $, %, &, ?"];
+  var special = ['!', '@', '#', '$', '%', '&', '?'];
 
   var passwordLength = parseInt(prompt("How long should the password be?"))
     // console.log(passwordLength)
     
     
-    if(passwordLength <= 7 || passwordLength >= 129 || isNaN(passwordLength)){
+    if(passwordLength < 7 || passwordLength > 129 || isNaN(passwordLength)){
       alert("Password has to be between 8 and 128 characters")
       
       return
@@ -55,7 +55,7 @@ function generatePassword() {
       var passwordCharacters = []
 
     if (specialCharacters) {
-      passwordCharacter = passwordCharacters.concat(special);
+      passwordCharacters = passwordCharacters.concat(special);
     }
 
     if (lowercaseLetters) {
@@ -63,7 +63,7 @@ function generatePassword() {
     }
 
     if (uppercaseLetters) {
-      passwordCharacter = passwordCharacter.concat(uppercase);
+      passwordCharacters = passwordCharacter.concat(uppercase);
     }
 
     if (numericCharacters) {
